@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:radial="clr-namespace:RadialGauge;assembly=RadialGauge"
+             xmlns:sh="clr-namespace:Sharpnado.Shades;assembly=Sharpnado.Shadows"
+             x:Class="MonitorRacks.Paginas.Rack"
+             Padding="10"
+             BackgroundImageSource="fondo2.png">
+    <Grid>
+        <Grid RowDefinitions="50*, 50*"
+              ColumnDefinitions="33*, 33*, 33*"
+              x:Name="gdHorizontal">
+            <Frame Grid.Row="0"
+                   Grid.Column="0"
+                   CornerRadius="10"
+                   BorderColor="Black">
+                <Grid RowDefinitions="80*, 20*">
+                    <Image Grid.Row="0"
+                           Aspect="AspectFit"
+                           x:Name="imgPuertaH"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />
+                    <Label Grid.Row="1"
+                           x:Name="lblPuertaH"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           TextColor="Black" />
+                </Grid>
+            </Frame>
+            <Frame Grid.RowSpan="2"
+                   Grid.Column="1"
+                   CornerRadius="10"
+                   BorderColor="Black">
+                <Grid RowDefinitions="80*, 20*">
+                    <Image Grid.Row="0"
+                           Aspect="AspectFit"
+                           x:Name="imgEnergiaH"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />
+                    <Label Grid.Row="1"
+                           x:Name="lblEnergiaH"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           TextColor="Black" />
+                </Grid>
+            </Frame>
+            <Frame Grid.Row="0"
+                   Grid.Column="2"
+                   CornerRadius="10"
+                   BorderColor="Black">
+                <Grid RowDefinitions="80*, 20*">
+                    <Image Grid.Row="0"
+                           Aspect="AspectFit"
+                           x:Name="imgLuzH"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />
+                    <Label Grid.Row="1"
+                           x:Name="lblLuzH"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           TextColor="Black" />
+                </Grid>
+            </Frame>
+            <Frame Grid.Row="1"
+                   Grid.Column="0"
+                   CornerRadius="10"
+                   BorderColor="Black">
+                <Grid RowDefinitions="80*, 20*">
+                    <Grid Grid.Column="0"
+                          ColumnDefinitions="25*, 50*, 25*">
+                        <radial:Gauge x:Name="gaugeTemperaturaH"
+                                      MinValue="-20"
+                                      MaxValue="50"
+                                      UnitOfMeasurement="°C"
+                                      HasAnimation="True"
+                                      HorizontalOptions="Center"
+                                      VerticalOptions="Center"
+                                      Grid.Column="1" />
+                    </Grid>
+                    <Label Grid.Row="1"
+                           x:Name="lblTemperaturaH"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           TextColor="Black" />
+                </Grid>
+            </Frame>
+            <Frame Grid.Row="1"
+                   Grid.Column="2"
+                   CornerRadius="10"
+                   BorderColor="Black">
+                <Grid RowDefinitions="80*, 20*">
+                    <Grid Grid.Column="0"
+                          ColumnDefinitions="25*, 50*, 25*">
+                        <radial:Gauge x:Name="gaugeHumedadH"
+                                      MinValue="-20"
+                                      MaxValue="50"
+                                      UnitOfMeasurement="%"
+                                      HasAnimation="True"
+                                      HorizontalOptions="Center"
+                                      VerticalOptions="Center"
+                                      Grid.Column="1" />
+                    </Grid>
+                    <Label Grid.Row="1"
+                           x:Name="lblHumedadH"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           TextColor="Black" />
+                </Grid>
+            </Frame>
+        </Grid>
+        
+        <Grid RowDefinitions="20*, 20*, 20*, 20*, 20*"
+              ColumnDefinitions="10*, 80*, 10*"
+              x:Name="gdVertical">
+            <Frame Grid.Row="0"
+                   Grid.Column="1"
+                   CornerRadius="10"
+                   BorderColor="Black">
+                <Grid RowDefinitions="80*, 20*">
+                    <Image Grid.Row="0"
+                           Aspect="AspectFit"
+                           x:Name="imgPuertaV"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />
+                    <Label Grid.Row="1"
+                           x:Name="lblPuertaV"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           TextColor="Black" />
+                </Grid>
+            </Frame>
+            <Frame Grid.Row="1"
+                   Grid.Column="1"
+                   CornerRadius="10"
+                   BorderColor="Black">
+                <Grid RowDefinitions="80*, 20*">
+                    <Image Grid.Row="0"
+                           Aspect="AspectFit"
+                           x:Name="imgEnergiaV"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />
+                    <Label Grid.Row="1"
+                           x:Name="lblEnergiaV"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           TextColor="Black" />
+                </Grid>
+            </Frame>
+            <Frame Grid.Row="2"
+                   Grid.Column="1"
+                   CornerRadius="10"
+                   BorderColor="Black">
+                <Grid RowDefinitions="80*, 20*">
+                    <Image Grid.Row="0"
+                           Aspect="AspectFit"
+                           x:Name="imgLuzV"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />
+                    <Label Grid.Row="1"
+                           x:Name="lblLuzV"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           TextColor="Black" />
+                </Grid>
+            </Frame>
+            <Frame Grid.Row="3"
+                   Grid.Column="1"
+                   CornerRadius="10"
+                   BorderColor="Black">
+                <Grid RowDefinitions="80*, 20*">
+                    <Grid Grid.Column="0"
+                          ColumnDefinitions="30*, 50*, 20*">
+                        <radial:Gauge x:Name="gaugeTemperaturaV"
+                                      MinValue="-20"
+                                      MaxValue="50"
+                                      UnitOfMeasurement="°C"
+                                      HasAnimation="True"
+                                      HorizontalOptions="Center"
+                                      VerticalOptions="Center"
+                                      Grid.Column="1" />
+                    </Grid>
+                    <Label Grid.Row="1"
+                           x:Name="lblTemperaturaV"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           TextColor="Black" />
+                </Grid>
+            </Frame>
+            <Frame Grid.Row="4"
+                   Grid.Column="1"
+                   CornerRadius="10"
+                   BorderColor="Black">
+                <Grid RowDefinitions="80*, 20*">
+                    <Grid Grid.Column="0"
+                          ColumnDefinitions="30*, 50*, 20*">
+                        <radial:Gauge x:Name="gaugeHumedadV"
+                                      MinValue="-20"
+                                      MaxValue="50"
+                                      UnitOfMeasurement="%"
+                                      HasAnimation="True"
+                                      HorizontalOptions="Center"
+                                      VerticalOptions="Center"
+                                      Grid.Column="1" />
+                    </Grid>
+                    <Label Grid.Row="1"
+                           x:Name="lblHumedadV"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           TextColor="Black" />
+                </Grid>
+            </Frame>
+        </Grid>
+    </Grid>
+</ContentPage>

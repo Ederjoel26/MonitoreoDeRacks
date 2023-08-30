@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MonitorRacks.Paginas.MenuFlyout"
+             Title="Flyout">
+    <StackLayout>
+        <ListView x:Name="MenuItemsListView"
+                  SeparatorVisibility="None"
+                  HasUnevenRows="true"
+                  ItemsSource="{Binding MenuItems}"
+                  BackgroundColor="White">
+            <ListView.Header>
+                <Frame BorderColor="Black"
+                       BackgroundColor="Black">
+                    <Grid Padding="5,10"
+                          RowDefinitions="70*, 30*"
+                          ColumnDefinitions="40, *">
+                        <Image Source="logoaslogic.png"
+                               Grid.Column="0"
+                               Grid.RowSpan="2"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center" />
+                        <Label Grid.Column="1"
+                               Grid.Row="0"
+                               Text="Monitoreo de Racks"
+                               TextColor="White"
+                               VerticalTextAlignment="Center"
+                               HorizontalTextAlignment="Start"
+                               FontAttributes="Bold"
+                               FontSize="Title" />
+                        <Label Text="ASLOGIC S.A DE C.V"
+                               Grid.Column="1"
+                               Grid.Row="1"
+                               FontAttributes="Bold"
+                               TextColor="White"
+                               HorizontalTextAlignment="Start"
+                               VerticalTextAlignment="Center" />
+                    </Grid>
+                </Frame>
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="5,10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="30" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Image Source="{Binding IconSource}" />
+                            <Label Grid.Column="1"
+                                   Text="{Binding Title}"
+                                   TextColor="Black"
+                                   VerticalTextAlignment="Center"
+                                   HorizontalTextAlignment="Start" />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sh="clr-namespace:Sharpnado.Shades;assembly=Sharpnado.Shadows"
+             BackgroundColor="White"
+             x:Class="MonitorRacks.Paginas.IniciarSesion">
+    <Grid>
+        <Grid RowDefinitions="35*, 5*, 55*, 5*"
+              ColumnDefinitions="5*, 90*, 5*"
+              x:Name="gdVertical">
+            <Grid BackgroundColor="#0081d3"
+                  Grid.RowSpan="2"
+                  Grid.ColumnSpan="3"
+                  RowDefinitions="10*, 80*, 10*"
+                  ColumnDefinitions="10*, 80*, 10*">
+                <Label VerticalTextAlignment="Start"
+                       HorizontalTextAlignment="Center"
+                       Grid.RowSpan="4"
+                       Grid.ColumnSpan="4"
+                       Text="ASLOGIC S.A de C.V"
+                       TextColor="Black"
+                       FontAttributes="Italic"
+                       Margin="5">
+                    <Label.FontSize>
+                        <OnIdiom x:TypeArguments="x:Double"
+                                 Phone="15"
+                                 Tablet="30" />
+                    </Label.FontSize>
+                </Label>
+                <Image Source="logoaslogic.png"
+                       Grid.Row="1"
+                       Grid.Column="1"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+            </Grid>
+            <sh:Shadows CornerRadius="30"
+                        Grid.Row="1"
+                        Grid.RowSpan="2"
+                        Grid.Column="1"
+                        Shades="{sh:SingleShade 
+                                Offset='5, 5',
+                                Opacity=0.7,
+                                Color=Gray}">
+                <Frame CornerRadius="20">
+                    <Grid RowDefinitions="20*, 20*, 20*, 20*, 20*"
+                          RowSpacing="5">
+                        <Label Text="Iniciar Sesión"
+                               Grid.Row="0"
+                               FontAttributes="Bold"
+                               HorizontalTextAlignment="Center"
+                               VerticalTextAlignment="Center"
+                               TextColor="Black">
+                            <Label.FontSize>
+                                <OnIdiom x:TypeArguments="x:Double"
+                                         Phone="40"
+                                         Tablet="60" />
+                            </Label.FontSize>
+                        </Label>
+                        <Entry Placeholder="Usuario"
+                               Grid.Row="1"
+                               HorizontalOptions="FillAndExpand"
+                               x:Name="txtUsuarioV">
+                            <Entry.FontSize>
+                                <OnIdiom x:TypeArguments="x:Double"
+                                         Phone="15"
+                                         Tablet="30" />
+                            </Entry.FontSize>
+                        </Entry>
+                        <Entry Placeholder="Contraseña"
+                               Grid.Row="2"
+                               HorizontalOptions="FillAndExpand"
+                               x:Name="txtPasswordV"
+                               IsPassword="True">
+                            <Entry.FontSize>
+                                <OnIdiom x:TypeArguments="x:Double"
+                                         Phone="15"
+                                         Tablet="30" />
+                            </Entry.FontSize>
+                        </Entry>
+                        <Button Text="Ingresar"
+                                Grid.Row="3"
+                                FontAttributes="Bold"
+                                CornerRadius="10"
+                                BackgroundColor="Black"
+                                TextColor="White"
+                                x:Name="btnIniciarSesionV"
+                                Clicked="Button_IniciarSesion">
+                            <Button.FontSize>
+                                <OnIdiom x:TypeArguments="x:Double"
+                                         Phone="15"
+                                         Tablet="30" />
+                            </Button.FontSize>
+                        </Button>
+                        <Button Text="Huella dactilar"
+                                Grid.Row="4"
+                                FontAttributes="Bold"
+                                CornerRadius="10"
+                                BackgroundColor="Black"
+                                TextColor="White"
+                                x:Name="btnHuellaV"
+                                Clicked="Button_Huella">
+                            <Button.FontSize>
+                                <OnIdiom x:TypeArguments="x:Double"
+                                         Phone="15"
+                                         Tablet="30" />
+                            </Button.FontSize>
+                        </Button>
+                    </Grid>
+                </Frame>
+            </sh:Shadows>
+        </Grid>
+        <Grid x:Name="gdHorizontal"
+              ColumnDefinitions="50*, 50*">
+            <Grid BackgroundColor="#0081d3"
+                  Grid.Column="0"
+                  RowDefinitions="10*, 80*, 10*"
+                  ColumnDefinitions="10*, 80*, 10*">
+                <Label VerticalTextAlignment="Start"
+                       HorizontalTextAlignment="Center"
+                       Grid.RowSpan="4"
+                       Grid.ColumnSpan="4"
+                       Text="ASLOGIC S.A de C.V"
+                       TextColor="Black"
+                       FontAttributes="Italic"
+                       Margin="5">
+                    <Label.FontSize>
+                        <OnIdiom x:TypeArguments="x:Double"
+                                 Phone="15"
+                                 Tablet="30" />
+                    </Label.FontSize>
+                </Label>
+                <Image Source="logoaslogic.png"
+                       Grid.Row="1"
+                       Grid.Column="1"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+            </Grid>
+            <sh:Shadows CornerRadius="30"
+                        Grid.Column="1">
+                <Frame CornerRadius="20"
+                       BorderColor="Transparent">
+                    <Grid RowDefinitions="20*, 20*, 20*, 20*, 20*"
+                          RowSpacing="5">
+                        <Label Text="Iniciar Sesión"
+                               Grid.Row="0"
+                               FontAttributes="Bold"
+                               FontSize="40"
+                               HorizontalTextAlignment="Center"
+                               VerticalTextAlignment="Center"
+                               TextColor="Black">
+                            <Label.FontSize>
+                                <OnIdiom x:TypeArguments="x:Double"
+                                         Phone="40"
+                                         Tablet="60" />
+                            </Label.FontSize>
+                        </Label>
+                        <Entry Placeholder="Usuario"
+                               Grid.Row="1"
+                               HorizontalOptions="FillAndExpand"
+                               x:Name="txtUsuarioH">
+                            <Entry.FontSize>
+                                <OnIdiom x:TypeArguments="x:Double"
+                                         Phone="15"
+                                         Tablet="30" />
+                            </Entry.FontSize>
+                        </Entry>
+                        <Entry Placeholder="Contraseña"
+                               Grid.Row="2"
+                               HorizontalOptions="FillAndExpand"
+                               x:Name="txtPasswordH"
+                               IsPassword="True">
+                            <Entry.FontSize>
+                                <OnIdiom x:TypeArguments="x:Double"
+                                         Phone="15"
+                                         Tablet="30" />
+                            </Entry.FontSize>
+                        </Entry>
+                        <Button Text="Ingresar"
+                                Grid.Row="3"
+                                FontAttributes="Bold"
+                                CornerRadius="10"
+                                BackgroundColor="Black"
+                                TextColor="White"
+                                x:Name="btnIniciarSesionH"
+                                Clicked="Button_IniciarSesion">
+                            <Button.FontSize>
+                                <OnIdiom x:TypeArguments="x:Double"
+                                         Phone="15"
+                                         Tablet="30" />
+                            </Button.FontSize>
+                        </Button>
+                        <Button Text="Huella dactilar"
+                                Grid.Row="4"
+                                FontAttributes="Bold"
+                                CornerRadius="10"
+                                BackgroundColor="Black"
+                                TextColor="White"
+                                x:Name="btnHuellaH"
+                                Clicked="Button_Huella">
+                            <Button.FontSize>
+                                <OnIdiom x:TypeArguments="x:Double"
+                                         Phone="15"
+                                         Tablet="30" />
+                            </Button.FontSize>
+                        </Button>
+                    </Grid>
+                </Frame>
+            </sh:Shadows>
+        </Grid>
+    </Grid>
+</ContentPage>

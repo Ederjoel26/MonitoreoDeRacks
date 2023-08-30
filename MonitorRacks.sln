@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34009.444
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonitorRacks.Android", "MonitorRacks\MonitorRacks.Android\MonitorRacks.Android.csproj", "{A2CEACF1-70AA-414C-8E49-D730EE47FE78}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonitorRacks", "MonitorRacks\MonitorRacks\MonitorRacks.csproj", "{98A534CA-9868-437F-8329-23EE9E354CC0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A2CEACF1-70AA-414C-8E49-D730EE47FE78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2CEACF1-70AA-414C-8E49-D730EE47FE78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2CEACF1-70AA-414C-8E49-D730EE47FE78}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{A2CEACF1-70AA-414C-8E49-D730EE47FE78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2CEACF1-70AA-414C-8E49-D730EE47FE78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2CEACF1-70AA-414C-8E49-D730EE47FE78}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{98A534CA-9868-437F-8329-23EE9E354CC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98A534CA-9868-437F-8329-23EE9E354CC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98A534CA-9868-437F-8329-23EE9E354CC0}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{98A534CA-9868-437F-8329-23EE9E354CC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98A534CA-9868-437F-8329-23EE9E354CC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98A534CA-9868-437F-8329-23EE9E354CC0}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {41847805-7518-4629-BB90-8D0D700FCA2D}
+	EndGlobalSection
+EndGlobal

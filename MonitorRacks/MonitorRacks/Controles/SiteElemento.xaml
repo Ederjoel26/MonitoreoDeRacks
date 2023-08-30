@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:radial="clr-namespace:RadialGauge;assembly=RadialGauge"
+             x:Name="this"
+             x:Class="MonitorRacks.Controles.SiteElemento">
+    <Frame BackgroundColor="White"
+           BorderColor="Black"
+           x:Name="fContenedor"
+           BindingContext="{x:Reference this}">
+
+        <Frame.GestureRecognizers>
+            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+        </Frame.GestureRecognizers>
+
+        <Grid RowDefinitions="50*, 50*"
+              ColumnDefinitions="33*, 33*, 33*">
+
+            <Grid Grid.Row="0"
+                  Grid.Column="0"
+                  RowDefinitions="70*, 30*"
+                  HorizontalOptions="Center"
+                  VerticalOptions="Center">
+                <Image Source="{Binding imgPuertaSource}"
+                       WidthRequest="{Binding imgPuertaWidth}"
+                       HeightRequest="{Binding imgPuertaHeight}"
+                       Grid.Row="0"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+                <Label Text="{Binding lblPuerta}"
+                       TextColor="Black"
+                       Grid.Row="1"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center" 
+                       FontSize="{Binding lblSizePuerta}"/>
+            </Grid>
+
+            <Grid Grid.Row="1"
+                  Grid.Column="2"
+                  RowDefinitions="70*, 30*"
+                  HorizontalOptions="Center"
+                  VerticalOptions="Center">
+                <Grid ColumnDefinitions="25*, 50*, 25*">
+                    <radial:Gauge x:Name="gaugeTemperatura"
+                                  WidthRequest="{Binding gTemperaturaWidth}"
+                                  HeightRequest="{Binding gTemperaturaHeight}"
+                                  MinValue="-20"
+                                  MaxValue="50"
+                                  UnitOfMeasurement="°C"
+                                  HasAnimation="True"
+                                  HorizontalOptions="Center"
+                                  VerticalOptions="Center"
+                                  CurrentValue="{Binding currentTemperatura}"
+                                  Grid.Column="1"/>
+                </Grid>
+                <Label Text="Temperatura"
+                       TextColor="Black"
+                       Grid.Row="1"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       FontSize="{Binding lblSizeTemperatura}"/>
+            </Grid>
+
+            <Grid Grid.RowSpan="2"
+                  Grid.Column="1"
+                  RowDefinitions="70*, 30*"
+                  HorizontalOptions="Center"
+                  VerticalOptions="Center">
+                <Image Source="{Binding imgEnergiaSource}"
+                       WidthRequest="{Binding imgEnergiaWidth}"
+                       HeightRequest="{Binding imgEnergiaHeight}"
+                       Grid.Row="0"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+                <Label Text="{Binding lblEnergia}"
+                       TextColor="Black"
+                       Grid.Row="1"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       FontSize="{Binding lblSizeEnergia}"/>
+            </Grid>
+
+            <Grid Grid.Row="0"
+                  Grid.Column="2"
+                  RowDefinitions="70*, 30*"
+                  HorizontalOptions="Center"
+                  VerticalOptions="Center">
+                <Image Source="{Binding imgLuzSource}"
+                       WidthRequest="{Binding imgLuzWidth}"
+                       HeightRequest="{Binding imgLuzHeight}"
+                       Grid.Row="0"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+                <Label Text="{Binding lblLuz}"
+                       TextColor="Black"
+                       Grid.Row="1"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       FontSize="{Binding lblSizeLuz}"/>
+            </Grid>
+
+            <Grid  Grid.Row="1"
+                   Grid.Column="0"
+                   RowDefinitions="70*, 30*"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center">
+                <Grid ColumnDefinitions="25*, 50*, 25*">
+                    <radial:Gauge HorizontalOptions="Center"
+                                  VerticalOptions="Center"
+                                  WidthRequest="{Binding gHumedadWidth}"
+                                  HeightRequest="{Binding gHumedadHeight}"
+                                  MinValue="-20"
+                                  MaxValue="50"
+                                  CurrentValue="{Binding currentHumedad}"
+                                  UnitOfMeasurement="%"
+                                  HasAnimation="True"
+                                  x:Name="gaugeHumedad"
+                                  Grid.Column="1"/>
+                </Grid>
+                <Label Text="Humedad"
+                       TextColor="Black"
+                       Grid.Row="1"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       FontSize="{Binding lblSizeHumedad}"/>
+            </Grid>
+
+        </Grid>
+    </Frame>
+</ContentView>
